@@ -1,5 +1,5 @@
 export const COLORS = {
-  black: "0deg 0% 0%",
+  black: "0deg 0% 3%",
   white: "0deg 0% 100%",
   gray: {
     100: "185deg 5% 95%",
