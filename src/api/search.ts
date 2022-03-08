@@ -4,5 +4,6 @@ export default function handler(
   req: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse
 ) {
-  res.send(`I am TYPESCRIPT`)
+  const { searchTerm } = req.body
+  res.send(JSON.stringify({ searchTerm: `Response: ${searchTerm}` }))
 }
