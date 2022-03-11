@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "m.r.t.",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "This is M.R.T.",
+  "version": "0.0.1",
+  "author": "Banana Boogie <banana@bananboogie.com>",
   "dependencies": {
     "axios": "^0.26.0",
     "gatsby": "^4.9.0",
@@ -21,6 +21,7 @@
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.9",
     "react-helmet": "^6.1.0",
+    "reddit": "^1.2.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
@@ -49,9 +50,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/banana-boogie/mrt"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/banana-boogie/mrt/issues"
   }
 }

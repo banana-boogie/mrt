@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components/macro"
-import { Search, Menu, ChevronDown, X } from "react-feather"
+import { Search, Menu, ChevronDown, X, Loader } from "react-feather"
 
 const icons = {
   search: Search,
   menu: Menu,
   "chevron-down": ChevronDown,
+  loader: Loader,
   close: X,
 }
 
