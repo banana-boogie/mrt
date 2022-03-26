@@ -191,7 +191,13 @@ html {
   --color-gray-500: hsl(${COLORS.gray[500]});
   --color-gray-700: hsl(${COLORS.gray[700]});
   --color-gray-900: hsl(${COLORS.gray[900]});
-  --color-gray-backdrop: hsl(${COLORS.gray[700]} / 0.8);
+  --color-gray-backdrop: hsl(${COLORS.gray[900]} / 0.8);
+  --color-yellow-100: hsl(${COLORS.yellow[100]});
+  --color-yellow-300: hsl(${COLORS.yellow[300]});
+  --color-yellow-500: hsl(${COLORS.yellow[500]});
+  --color-yellow-700: hsl(${COLORS.yellow[700]});
+  --color-yellow-900: hsl(${COLORS.yellow[900]});
+
 }
 
 

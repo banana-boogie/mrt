@@ -69,19 +69,19 @@ export default async function handler(
       limit = 25,
     } = req.body
 
-    // if (!searchTerm) {
-    //   throw Error("Missing search term")
-    // }
-
     if (subreddits && !Array.isArray(subreddits)) {
       subreddits = [subreddits]
     }
 
+    if (keywords && !Array.isArray(keywords)) {
+      keywords = [keywords]
+    }
+
     const subredditURLs = subreddits.map(
       subreddit =>
-        `/r/${subreddit}?sort=${sort}&t=${timeframe}&limit=${limit}
-        ${searchTerm && "&q=${searchTerm}"}
-        `
+        `/r/${subreddit}?sort=${sort}&t=${timeframe}&limit=${limit}${
+          searchTerm && `&q=${searchTerm}`
+        }`
     )
 
     const redditThreads = await Promise.all(
@@ -133,15 +133,8 @@ async function fetchRedditData(url, keywords) {
     return allComments
   } catch (error) {
     console.error("ERROR fetching reddit data", error)
+    return []
   }
-}
-
-/**
- * Parse the url to get the url after the subreddit /r/
- */
-function parseRedditURL(url: String | String[]) {
-  const subredditIndex = url.indexOf("/r/")
-  return subredditIndex !== -1 ? url.slice(subredditIndex) : null
 }
 
 function createKeywordRegex(keywords: String | String[]) {

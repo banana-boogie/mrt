@@ -63,7 +63,7 @@ const Main = styled.main`
 const Footer = styled.footer`
   align-self: flex-end;
   margin-right: 4px;
-  color: var(--color-gray-700);
+  color: var(--color-yellow-900);
 `
 
 export default Layout

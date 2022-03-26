@@ -6,9 +6,12 @@ import Icon from "../components/Icon"
 import Layout from "../components/Layout/layout"
 import Seo from "../components/SEO/seo"
 import SearchInput from "../components/SearchInput"
+import TextInput from "../components/TextInput"
 
 const IndexPage = () => {
-  const [searchTerm, setSearchTerm] = React.useState("")
+  const [searchTerm, setSearchTerm] = React.useState("gym")
+  const [subreddits, setSubreddits] = React.useState("bjj")
+  const [keywords, setKeywords] = React.useState("love, hate, sucks, best")
   const [isSearching, setIsSearching] = React.useState(false)
 
   async function handleKeyDown(event) {
@@ -20,6 +23,8 @@ const IndexPage = () => {
   async function search() {
     const query = {
       searchTerm,
+      keywords,
+      subreddits,
     }
     try {
       setIsSearching(true)
@@ -40,11 +45,24 @@ const IndexPage = () => {
         {isSearching ? (
           <LoadingIcon id="loader" />
         ) : (
-          <SearchBar
-            label="Search"
-            onChange={e => setSearchTerm(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
+          <SearchWrapper>
+            <SearchBar
+              label="Search"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+            <SubredditInput
+              label="Subreddits"
+              value={subreddits}
+              onChange={e => setSubreddits(e.target.value)}
+            />
+            <KeywordsInput
+              label="Keywords"
+              value={keywords}
+              onChange={e => setKeywords(e.target.value)}
+            />
+          </SearchWrapper>
         )}
       </Wrapper>
     </Layout>
@@ -56,11 +74,22 @@ const Wrapper = styled.div`
   margin-bottom: 250px;
 `
 
+const SearchWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
 const SearchBar = styled(SearchInput)`
   width: 638px;
   height: 44px;
-  border-radius: 24px;
+  border-radius: 3px;
+  border: 2px solid var(--color-white);
 `
+
+const SubredditInput = styled(TextInput)``
+
+const KeywordsInput = styled(TextInput)``
 
 const rotate = keyframes`
   from{
