@@ -197,7 +197,15 @@ html {
   --color-yellow-500: hsl(${COLORS.yellow[500]});
   --color-yellow-700: hsl(${COLORS.yellow[700]});
   --color-yellow-900: hsl(${COLORS.yellow[900]});
-
+  --color-blue-100: hsl(${COLORS.blue[100]});
+  --color-blue-200: hsl(${COLORS.blue[200]});
+  --color-blue-300: hsl(${COLORS.blue[300]});
+  --color-blue-400: hsl(${COLORS.blue[400]});
+  --color-blue-500: hsl(${COLORS.blue[500]});
+  --color-blue-600: hsl(${COLORS.blue[600]});
+  --color-blue-700: hsl(${COLORS.blue[700]});
+  --color-blue-800: hsl(${COLORS.blue[800]});
+  --color-blue-900: hsl(${COLORS.blue[900]});
 }
 
 
